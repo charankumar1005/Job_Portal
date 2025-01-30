@@ -1,0 +1,192 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Verdana', sans-serif;
+}
+
+body {
+    color: #444;
+    background-color: #eaeef1;
+    line-height: 1.6;
+}
+
+/* Navigation Styles */
+header nav {
+    background-color: #343a40; /* Dark grey */
+    padding: 1.5rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    margin-left: 1.5rem;
+}
+
+header nav ul li a {
+    color: #f8f9fa; /* Light grey */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #adb5bd; /* Grey */
+}
+
+/* Hero Section */
+.hero 
+{
+    color: rgba(255, 255, 255, 0.9); 
+    text-align: center;
+    padding: 5rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #6c757d; /* Grey */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px; /* More rounded corners */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #5a6268; /* Darker grey */
+}
+
+.cta-button.secondary {
+    background-color: #17a2b8; /* Teal */
+    margin-left: 1rem;
+}
+
+.cta-button.secondary:hover {
+    background-color: #138496; /* Darker teal */
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 3rem;
+    background-color: #ffffff;
+}
+
+.feature {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+    margin: 1rem;
+    padding: 2rem;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Softer shadow */
+    border-radius: 12px; /* More rounded corners */
+    background-color: #fdfdfd;
+    transition: box-shadow 0.3s;
+}
+
+.feature:hover {
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.25); /* Deeper shadow on hover */
+}
+
+.feature img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.feature h2 {
+    color: #007bff;
+    margin-bottom: 1rem;
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 3rem;
+    background-color: #f1f3f5; /* Light grey */
+    text-align: center;
+}
+
+.how-it-works h2 {
+    color: #333;
+    font-size: 2.5rem; /* Larger title */
+    margin-bottom: 2rem;
+}
+
+.step {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.step img {
+    width: 70px; /* Slightly larger */
+    height: 70px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    border: 2px solid #007bff; /* Blue border */
+}
+
+.step h3 {
+    color: #007bff;
+    font-size: 1.75rem; /* Larger subtitle */
+    margin-bottom: 0.5rem;
+}
+
+.step p {
+    font-size: 1.1rem; /* Slightly larger text */
+    color: #666;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: 3rem;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: #333;
+    font-size: 2.5rem; /* Larger title */
+    margin-bottom: 1.5rem;
+}
+
+.testimonial {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Dark grey */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-links a {
+    color: #dcdcdc; /* Light grey */
+    margin: 0 0.5rem;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: white;
+}

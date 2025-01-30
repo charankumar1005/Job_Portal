@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal - Home</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+/* General Navbar Styles */
+nav {
+    background-color: #5fbae7; /* Deep blue background to match the hero section */
+    color: #ffffff;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow for a modern effect */
+    border-bottom: 2px solid #00aaff; /* Subtle bottom border for emphasis */
+}
+
+/* Navbar List Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Center the navigation items */
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar List Items and Links */
+nav ul li {
+    margin: 0 1.5rem; /* Space between navigation items */
+}
+
+nav ul li a {
+    color: #ffffff; /* White text for contrast */
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid transparent; /* Underline effect on hover */
+}
+
+/* Hover and Active Link Effects */
+nav ul li a:hover {
+    color: #ffcc00; /* Gold color on hover */
+    border-bottom: 2px solid #ffcc00; /* Underline with gold */
+    transform: translateY(-2px); /* Slight upward movement */
+}
+
+nav ul li a:active {
+    color: #00aaff; /* Light blue when active */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0.8rem 0; /* Increase spacing between items */
+    }
+}
+
+
+/* Hero Section Styles */
+.hero {
+    background: linear-gradient(to bottom right, #002f4b, #00aaff); /* Deep blue gradient */
+    color: #ffffff; /* White text for high contrast */
+    text-align: center;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+}
+
+/* Hero Text Styling */
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 0;
+    color: #ffcc00; /* Striking gold color for emphasis */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6); /* Deep shadow for strong contrast */
+}
+
+/* Additional Styling for a Modern Look */
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    max-width: 800px;
+    color: #e0e0e0; /* Light gray for a softer tone */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+}
+
+    .how-it-works {
+    padding: 4rem 2rem; /* Increased padding for better spacing */
+    background-color: #f1f3f5; /* Light grey background */
+    text-align: center;
+}
+
+.how-it-works h2 {
+    color: #333; /* Dark text for contrast */
+    font-size: 2.5rem; /* Larger title size */
+    margin-bottom: 2rem; /* Space below the title */
+}
+
+.step {
+    margin: 2rem 0; /* Vertical margin for spacing between steps */
+    padding: 1.5rem; /* Padding around each step */
+    border-radius: 12px; /* Rounded corners */
+    background-color: #ffffff; /* White background for each step */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover effect */
+}
+
+.step:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.step img {
+    width: 80px; /* Set a fixed size for images */
+    height: 80px; /* Keep images square */
+    margin-bottom: 1rem; /* Space below the image */
+    border-radius: 50%; /* Circular images */
+    border: 2px solid #007bff; /* Blue border around images */
+}
+
+.step h3 {
+    color: #007bff; /* Blue color for headings */
+    font-size: 1.75rem; /* Increased heading size */
+    margin: 0.5rem 0; /* Space above and below headings */
+}
+
+.step p {
+    font-size: 1.1rem; /* Slightly larger text for readability */
+    color: #666; /* Darker grey text for description */
+    max-width: 300px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the paragraph */
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .how-it-works {
+        display: flex; /* Use flexbox for larger screens */
+        justify-content: space-around; /* Space between steps */
+        align-items: flex-start; /* Align steps to the start */
+    }
+
+    .step {
+        flex: 1; /* Allow steps to grow */
+        max-width: 300px; /* Max width for each step */
+        margin: 0 1rem; /* Horizontal margin for spacing */
+    }
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    justify-content: space-between; /* Space between the cards */
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+.feature {
+    flex: 1 1 calc(33% - 1rem); /* Flex properties to adjust size */
+    margin: 0.5rem; /* Margin for spacing */
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fdfdfd;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.feature:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.feature img {
+    width: 80%; /* Adjusted width for images */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.feature h2 {
+    color: #007bff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem; /* Increased font size */
+}
+
+.feature p {
+    font-size: 1rem; /* Increased font size for better readability */
+    color: #555; /* Darker color for text */
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 1rem; /* Space above the button */
+    background-color: #28a745;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="job_postings.php">Find Jobs</a></li>
+                <li><a href="register.php">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero">
+            <h1>Your Dream Job Awaits – Start Your Journey Today!</h1>
+        </div>
+        
+
+    </header>
+
+    <main>
+        <section class="features">
+            <div class="feature">
+                <img src="uploads/img1.jpg" alt="Job Seekers">
+                <h2>Empower Your Career</h2>
+                    <p>Unlock your potential with personalized job recommendations tailored to your skills and preferences. Our platform simplifies your job search, allowing you to explore diverse opportunities, submit applications effortlessly, and receive real-time updates on your application status.</p>
+                    <a href="register.html" class="cta-button">Explore Opportunities</a>
+            </div>
+            <div class="feature">
+                <img src="uploads/img2.jpg" alt="Employers">
+                <h2>Streamline Your Hiring Process</h2>
+                    <p>Effortlessly connect with top talent by posting job openings and managing applications all in one place. Utilize our advanced filtering tools to review candidates based on specific criteria, ensuring you find the right fit for your team quickly and effectively.</p>
+                    <a href="register.html" class="cta-button">Start Hiring Today</a>
+            </div>
+            <div class="feature">
+                <img src="uploads/img3.png" alt="Why Choose Us">
+                <h2>Why Partner with Us?</h2>
+                    <p>Experience a superior job portal designed with your needs in mind. From smart search algorithms that match you with the best opportunities to dedicated customer support that guides you every step of the way, we are committed to making your hiring and job-seeking experience as efficient and effective as possible.</p>
+                    <a href="#" class="cta-button">Discover the Difference</a>
+            </div>
+        </section>
+
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <div class="step">
+                <img src="uploads/register.jpg" alt="Create Your Profile">
+                <h3>1. Create Your Profile</h3>
+                <p>Get started by setting up a profile that highlights your strengths as a job seeker or your company’s values as an employer.</p>
+            </div>
+            <div class="step">
+                <img src="uploads/job-search.jpg" alt="Discover Opportunities">
+                <h3>2. Discover Opportunities</h3>
+                <p>Browse through tailored job listings or search for top talent. Save your favorites and receive recommendations based on your interests.</p>
+            </div>
+            <div class="step">
+                <img src="uploads/connect.jpeg" alt="Make Connections">
+                <h3>3. Make Connections</h3>
+                <p>Connect with recruiters or reach out to candidates directly. Start meaningful conversations that lead to the perfect job match.</p>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+
+</html>

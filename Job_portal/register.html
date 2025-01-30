@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Job Portal</title>
+    <style>
+        /* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styling for the registration container */
+.register-container {
+    background-color: #f4f9ff; /* Light background for contrast */
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Header for the registration form */
+.register-container h2 {
+    color: #002f4b; /* Dark blue color */
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+/* General styling for the form and inputs */
+.register-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-form input,
+.register-form select {
+    padding: 0.8rem;
+    margin: 0.6rem 0;
+    border: 1px solid #00aaff; /* Light blue border */
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+    outline: none;
+    border-color: #ffcc00; /* Gold border on focus */
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.5);
+}
+
+/* Styling for the additional fields */
+.additional-fields {
+    display: none; /* Hidden by default */
+    margin-top: 0.6rem;
+}
+
+/* Register button styling */
+.register-button {
+    background-color: #00aaff;
+    color: #ffffff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.register-button:hover {
+    background-color: #ffcc00; /* Gold color on hover */
+}
+
+/* Login link styling */
+.login-link {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.login-link a {
+    color: #00aaff; /* Light blue color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.login-link a:hover {
+    color: #ffcc00; /* Gold color on hover */
+}
+
+    </style>
+    <script>
+        function showAdditionalFields(role) {
+            const fields = document.querySelectorAll('.additional-fields');
+            fields.forEach(field => field.style.display = 'none');
+            if (role) {
+                document.querySelector(`.${role}-fields`).style.display = 'block';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="register-container">
+        <h2>Create Your Account</h2>
+        <form action="register.php" method="POST" class="register-form">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <select name="role" id="role" onchange="showAdditionalFields(this.value)" required>
+                <option value="">Select Your Role</option>
+                <option value="jobseeker">Jobseeker</option>
+                <option value="employer">Employer</option>
+            </select>
+
+            <!-- Role-specific fields -->
+            <div class="additional-fields jobseeker-fields">
+                <input type="text" name="skills" placeholder="Skills" required>
+            </div>
+            <div class="additional-fields employer-fields">
+                <input type="text" name="company_name" placeholder="Company Name" required>
+                <input type="text" name="company_location" placeholder="Company Location" required>
+            </div>
+
+            <button type="submit" class="register-button">Register</button>
+        </form>
+        <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+</body>
+
+</html>

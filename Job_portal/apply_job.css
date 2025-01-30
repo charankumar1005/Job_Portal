@@ -1,0 +1,78 @@
+/* Apply Job Form Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.left-side,
+.right-side {
+    width: 48%; /* Set both sides to take up 48% of the container width */
+    padding: 10px;
+}
+
+.left-side label,
+.right-side label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.left-side input,
+.right-side input,
+.left-side textarea,
+.right-side textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.left-side textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .left-side,
+    .right-side {
+        width: 100%; /* Full width for small screens */
+    }
+}
